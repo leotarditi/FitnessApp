@@ -1,25 +1,8 @@
 import React from 'react'
 import circlesImg from '../images/circles.png'
-import exerciseImg from '../images/exercise.png'
-import exerciseImg1 from '../images/ejercicio.png'
 import './styles/Card.css'
 
 class Card extends React.Component {
-
-    constructor(props){
-        super(props)
-        this.state = {
-            image: exerciseImg1
-        }
-    }
-
-    componentDidMount(){
-        setTimeout(() => {
-            this.setState({
-                image: exerciseImg
-            })
-        }, 5000)
-    }
 
     render(){
         const { title, description, img, leftColor, rightColor } = this.props
@@ -32,7 +15,7 @@ class Card extends React.Component {
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
-                            <img src={this.state.image} className="float-right" alt="exercise"/>
+                            <img src={img} className="float-right" alt="exercise"/>
                         </div> 
                         <div className="col-6 Fitness-Card-Info">
                             <h1>{title}</h1>
